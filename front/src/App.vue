@@ -51,7 +51,8 @@
 
         <div
           v-show="!mainDrawerMini"
-          class="ma-3"
+          class="pa-3"
+          style="max-width: 300px"
         >
           <component :is="currentDrawerComponent"></component>
         </div>
