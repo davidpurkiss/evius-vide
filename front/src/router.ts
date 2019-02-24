@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Projects from './views/Projects.vue';
+import Start from './views/Start.vue';
 
 Vue.use(Router);
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'project',
-      component: Projects
+      name: 'start',
+      component: Start
     },
     {
       path: '/about',

@@ -10,6 +10,7 @@
         justify-start
       >
         <v-flex
+          v-if="icon"
           xs1
           text-xs-center
         >

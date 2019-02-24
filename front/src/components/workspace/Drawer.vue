@@ -13,28 +13,59 @@
         :value="selectedWorkspace"
       ></v-select>
     </v-flex>
-    <v-flex xs2>
+    <v-flex
+      xs2
+      text-xs-right
+    >
       <v-btn
         flat
         icon
+        class="ma-0"
       >
         <v-icon small>fa-edit</v-icon>
       </v-btn>
     </v-flex>
-    <v-flex xs12>
+    <v-flex xs8>
       <div class="title">Repositories</div>
+    </v-flex>
+    <v-flex
+      xs4
+      text-xs-right
+    >
+      <v-btn
+        flat
+        icon
+        class="ma-0"
+      >
+        <v-icon small>fa-edit</v-icon>
+      </v-btn>
+      <v-btn
+        flat
+        icon
+        class="ma-0"
+      >
+        <v-icon small>fa-plus</v-icon>
+      </v-btn>
+    </v-flex>
+    <v-flex xs12>
       <v-list>
         <v-list-tile
           v-for="item in repositories"
           :key="item.title"
+          @click=""
         >
-          <v-list-tile-action>
-            <v-icon color="pink">fas fa-star</v-icon>
-          </v-list-tile-action>
 
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-sub-title>{{ item.description }}</v-list-tile-sub-title>
           </v-list-tile-content>
+          <v-list-tile-action>
+            <v-icon
+              small
+              color="secondary"
+            >fas fa-star</v-icon>
+          </v-list-tile-action>
+
         </v-list-tile>
       </v-list>
     </v-flex>

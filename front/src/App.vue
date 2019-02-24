@@ -21,7 +21,7 @@
     <v-navigation-drawer
       v-model="mainDrawer"
       :mini-variant.sync="mainDrawerMini"
-      width="380"
+      :width="drawerWidth"
       clipped
       fixed
       app
@@ -52,7 +52,7 @@
         <div
           v-show="!mainDrawerMini"
           class="pa-3"
-          style="max-width: 300px"
+          :style="`max-width: ${drawerWidth - 80}px`"
         >
           <component :is="currentDrawerComponent"></component>
         </div>
@@ -88,6 +88,7 @@ import GitDrawer from '@/components/git/Drawer.vue';
 export default class App extends Vue {
   mainDrawer = true;
   mainDrawerMini = false;
+  drawerWidth = 450;
 
   menuItems = [
     { icon: 'fa-sitemap', title: 'Workspace', component: 'workspace-drawer' },
